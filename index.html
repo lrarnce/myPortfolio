@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Lawrence Arcangeles</title>
+    
+</head>
+<body>
+    <div class="mainDiv">
+        <!-- Navbar -->
+        <nav class="nav" id="nav">
+            <h2 onclick=scrollToTop()>try</h2>
+            <button class="burger" id="burger" onclick=burgerMenu()>
+                
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="navList" id="navList">
+                <li onclick=scrollToTop()>Home</li>
+                <li onclick= scrollToAbout()>About Me</li>
+                <li onclick= scrollToMyProjects()>My Works</li>
+            </ul>
+        </nav>
+        <!-- Navbar ends -->
+
+         <!-- Main content -->
+         <div class="mainContent" id="mainContent">
+            <div class="left">
+                <div class="leftContent">
+                    <h3>Hello everyone,  I'm</h3>
+                    <h1 class="lawrenceH1">Lawrence</h1>
+                    <h2>Software Developer</h2>
+                    <p>I’m a passionate software developer dedicated to building reliable and efficient software. As I continue to improve my skills, 
+                    I’m excited to explore opportunities where I can contribute to meaningful projects, work with talented teams, and make an impact through technology.</p>
+                </div>
+               
+                <div class="btnGroup">
+                    <button><a href="https://mail.google.com/mail/u/0/?fs=1&amp;to=lawrencerupertarcangeles@gmail.com&amp;su=SUBJECT&amp;body=BODY&amp;tf=cm" target="_blank" class="dl">Email Me</a></button>
+                    <button><a href="path_to_file" download="proposed_file_name">Download CV</a></button>
+                </div>
+               
+            </div>
+
+            <div class="right">
+                <img src="./assets/images/sample.jpg" alt="My Image">
+            </div>
+         </div>
+         <!-- Main Content ends -->
+
+         <!-- About Me Content -->
+         <div class="aboutDiv" id="aboutDiv">
+            <div class="aboutLeft">
+                <div class="aboutLeftContent">
+                    <h1>About Me</h1>
+                    <h2>Technologies I've worked with</h2>
+                    <p>Here are the following technologies I have used in my past projects and past job: </p>
+                    <div class="techList">
+                        <img src="./assets/images/html-img.png" alt="HTML">
+                        <img src="./assets/images/css-img.png" alt="CSS">
+                        <img src="./assets/images/bootstrap-img.png" alt="Bootstrap">
+                        <img src="./assets/images/js-img.png" alt="JS">
+                        <img src="./assets/images/react-img.png" alt="React">
+                        <img src="./assets/images/python-img.png" alt="Python">
+                        <img src="./assets/images/django-img.png" alt="Django">
+                        <img src="./assets/images/php-img.png" alt="PHP">
+                        <img src="./assets/images/sql-img.png" alt="SQL">
+                    </div>
+                </div>
+                
+               
+               
+            </div>
+
+         
+         </div>
+         <!-- My Projects Content ends -->
+
+          <!-- My Projects Content -->
+          <div class="myProjectsDiv" id="myProjectsDiv">
+            <div class="myProjectsLeft">
+                <div class="myProjectsLeftContent">
+                    <h1>My Works</h1>
+                    <!-- <p>Here are the following projects I have made to improve my software development skills: </p> -->
+                    <div class="myProjectsList">
+                        <div class="project" id="downloadStudentDatabase">
+                            <img src="https://static.wixstatic.com/media/1f3ddf_817abe0f6bff4bb7a945bf04702a0aa4~mv2.jpg/v1/fill/w_249,h_129,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/1f3ddf_817abe0f6bff4bb7a945bf04702a0aa4~mv2.jpg" alt="HTML" >
+                            <p>Student Database <br> Management System</p>
+                            <div class="hoverImg">
+                                <img src="./assets/images/python-sql.png" alt="Profile Image" >
+                            </div>
+                        </div>
+                        <div class="project" id="downloadPayroll">
+                            <img src="https://static.wixstatic.com/media/1f3ddf_646d4a1599d54078961f0c649e52fe2e~mv2.png/v1/fill/w_245,h_166,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1f3ddf_646d4a1599d54078961f0c649e52fe2e~mv2.png" alt="HTML">
+                            <p>Payroll <br> Management System</p>
+                            <div class="hoverImg">
+                                <img src="./assets/images/python-sql.png" alt="Profile Image">
+                            </div>
+                        </div>
+                        <div class="project">
+                            <a href="https://youtu.be/bP37tIwa9BE" target="_blank">
+                                <img src="./assets/images/ems-thumbnail.png" alt="HTML">
+                                <p>Employee Management System</p>
+                                <div class="hoverImg">
+                                    <img src="./assets/images/ems.png" alt="Profile Image">
+                                </div>
+                            </a>
+                           
+                        </div>
+                       
+                      
+                      
+                    </div>
+                </div>
+                
+               
+               
+            </div>
+
+         
+         </div>
+         <!-- My Projects Content ends -->
+
+
+
+        
+
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
