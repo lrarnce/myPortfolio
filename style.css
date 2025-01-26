@@ -8,14 +8,17 @@ body{
     font-weight: 200;
     font-style: normal;
     color: white;
-    background: linear-gradient(to bottom, #20242d, #2c313a, #282c31);
+    /* background: linear-gradient(to bottom, #20242d, #2c313a, #282c31); */
+    /* background-color: #ffffff; */
     -moz-transform: scale(1.3); /* for Firefox, default 1*/
     zoom:130%; /* For Chrome, IE, default 100%*/
+    background: url('./assets/images/moving_bg.gif') no-repeat center center fixed;
+    background-size: cover;
 
  
 }
 .nav{
-    background: #20242d;
+    background: #181b22;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -126,6 +129,13 @@ a{
     display: flex;
     justify-content: space-evenly;
     padding: 5%;
+    /* Flex div bg */
+    background: #181b22;
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.747);
+    margin: 25px;
+    border-radius: 10px;
+    opacity: 95%;
+    
     
 }
 
@@ -226,6 +236,13 @@ a{
     display: flex;
     justify-content: space-evenly;
     padding: 5%;
+    /* Flex div bg */
+    background: #181b22;
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.747);
+    margin: 25px;
+    border-radius: 10px;
+    opacity: 95%;
+    
     
   
     
@@ -285,6 +302,13 @@ a{
     display: flex;
     justify-content: space-evenly;
     padding: 5%;
+    /* Flex div bg */
+    background: #181b22;
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.747);
+    margin: 25px;
+    border-radius: 10px;
+    opacity: 95%;
+    
     
 }
 
