@@ -268,7 +268,7 @@ a{
     font-style: normal;
 }
 
-.techList{
+/* .techList{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -291,107 +291,147 @@ a{
 
 .techList img:hover{
     transform: scale(1.02);
-}
+} */
+
+.techList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem; /* Add spacing between items */
+  }
+  
+  .techList img {
+    position: relative;
+    border-radius: 8px; /* Match anime-card's rounded corners */
+    overflow: hidden;
+    /* background-color: #080420; Match background color */
+    transition: transform 0.2s;
+    flex: 1 1 33%;
+    max-width: 150px; 
+    max-height: 200px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.6); /* Similar shadow effect */
+    object-fit: contain; /* Ensure uniform scaling of images */
+  }
+  
+  .techList img:hover {
+    transform: translateY(-5px); /* Similar hover effect to anime-card */
+  }
+  
 
 /* About Content Div CSS Ends */
 
 
 
 /* Project Content Div CSS */
-.myProjectsDiv{
+.myProjectsDiv {
     display: flex;
     justify-content: space-evenly;
     padding: 5%;
-    /* Flex div bg */
     background: #181b22;
-    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.747);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
     margin: 25px;
     border-radius: 10px;
     opacity: 95%;
-    
-    
-}
-
-.myProjectsLeft{
-    flex:1;
+  }
+  
+  .myProjectsLeft {
+    flex: 1;
     display: flex;
     flex-direction: column;
     position: relative;
     padding: 10px;
-    /* border: 1px solid; */
-    
-}
-
-.myProjectsLeft h1{
+  }
+  
+  .myProjectsLeft h1,
+  .myProjectsLeft h2 {
     font-weight: 500;
     font-style: normal;
-}
-
-.myProjectsLeft h2{
-    font-weight: 500;
-    font-style: normal;
-}
-
-.myProjectsList{
+    color: white; /* Ensure heading text is visible */
+  }
+  
+  .myProjectsList {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
-}
-
-
-.project{
-    justify-content: center;
-    align-items: center;
-    /* border: 1px black solid; */
-    margin: 10px;
+    gap: 1rem; /* Added spacing between items */
+  }
+  
+  .project {
     position: relative;
-    float: left;
-
-   
-}
-
-.project p{
-   
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px; /* Smooth rounded corners */
+    /* background-color: #080420; Dark background */
+    overflow: hidden; /* Hide overflow for hover effect */
+    transition: transform 0.2s; /* Smooth hover transition */
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.6); /* Similar shadow effect */
+  }
+  
+  .project p {
     text-align: center;
-    
-}
-
-
-
-
-.project img{
-    width: 250px; 
+    color: white; /* Ensure text is visible on dark background */
+    font-size: 1rem;
+  }
+  
+  .project img {
+    width: 250px;
     height: 200px;
-    border-radius: 15px;
-    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.747);
-    
-    object-fit:fill;
-    transition: 0.15s;
-}
-
-.myProjectsList img:hover{
+    border-radius: 8px 8px 0px 0px; /* Smooth rounded corners */
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.6); /* Depth with shadow */
+    object-fit: fill; /* Ensures uniform scaling */
+    transition: transform 0.2s;
+  }
+  
+  .myProjectsList img:hover {
     cursor: pointer;
-    transform: scale(1.02);
-    
-}
-
-.project .hoverImg {
+    transform: translateY(-5px); /* Similar hover effect */
+  }
+  
+  /* Hover Image Styling */
+  .project .hoverImg {
     position: absolute;
-    left: 0;
     top: 0;
-    display: none;
-    opacity: 98%;
-    color: #282c31;
-    object-fit: fill;
-    transform: scale(1.02);
+    left: 0;
+    width: 100%; /* Full width of the parent container */
+    height: 100%; /* Full height of the parent container */
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    opacity: 0; /* Hidden by default */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+    border-radius: 8px; /* Match the rounded corners of the image */
   }
   
   .project:hover .hoverImg {
-    display: block;
-    
+    opacity: 1; /* Show overlay on hover */
+  }
+  
+  .project .hoverImg img {
+    width: 100%; /* Cover the full area */
+    height: 100%; /* Cover the full area */
+    object-fit: cover; /* Ensure the image fills the space */
+    border-radius: 8px; /* Match the border-radius */
+  }
+  
+  .project .hoverImg p {
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
   }
 
+  .project p{
+    padding-top: 10px;
+  }
+  
+  /* @media (max-width: 768px) {
+   
+  } */
+  
 
 
 /* Main Content Div CSS Ends */
@@ -407,68 +447,64 @@ a{
         position: sticky;
         top: 0;
         opacity: 100%;
-       
-
+        background: #181b22;
     }
+
     .nav ul {
         width: 100%;
-        display: none;
-        
-      }
-    .nav ul.show{
-        display: flex;
+        display: none; /* Hide navbar links by default */
         flex-direction: column;
-        
-      
+        padding: 0;
+        align-items: center;
     }
+
+    .nav ul.show{
+        display: flex; /* Show navbar links when 'show' class is added */
+    }
+
     .nav h2 {
         justify-content: center;
         margin-left: 20px;
         flex-direction: column;
-      /* display: none; */
     }
-    
+
     .burger{
         display: block;
         margin-right: 50px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
     }
-    .btnGroup{
+
+    .btnGroup {
         position: absolute;
         top: 100%;
     }
 
     /* Main Content */
-
     .mainContent {
         flex-direction: column;
-       
-      }
+    }
 
-      .left{
+    .left{
         margin-bottom: 50px;
-      }
+    }
 
-      .right img{
+    .right img{
         height: 50%;
         width: 50%;
         margin: 0;
         align-items: center;
-        
-        
     }
+
     /* About */
-    /* .aboutDiv{
-        margin-top: 200px;
-    } */
     .techList{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        
     }
-    
+
     .techList img{
-        
         flex: 1 1 33%;
         max-width: 50px; 
         max-height: 50px;
@@ -476,7 +512,6 @@ a{
         margin-bottom: 15px;
         border-radius: 10%;
         box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.747);
-        
         object-fit: contain;
         transition: 0.15s;
     }
@@ -486,18 +521,20 @@ a{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-       
     }
-    
+
     .project{
         justify-content: center;
         margin: 10px;
     }
-    
-    .project p{
-        align-items: center;
-       
-    }
-    
 
-  }
+    .myProjectsDiv {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project img {
+        width: 200px;
+        height: 150px;
+    }
+}
