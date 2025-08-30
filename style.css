@@ -533,7 +533,7 @@ a{
 .project:hover {
     cursor: pointer;
     transform: scale(1.1);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 12px 25px rgb(0, 0, 0);
 }
 
 .controls {
